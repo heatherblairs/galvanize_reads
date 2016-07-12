@@ -1,0 +1,13 @@
+<h2>Delete a Book</h2>
+<form action="/{{book.id}}/delete" method="post">
+  <ul>
+      <li>
+        <a>{{book.title}}</a>
+        <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
+        <a>{{book.genre}}</a>
+        <a>{{book.description}}</a>
+        <a>{{book.coverURL}}</a>
+      </li>
+  </ul>
+  <button>Delete {{book.title}}?</button>
+</form>

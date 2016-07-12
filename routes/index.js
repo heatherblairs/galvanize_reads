@@ -22,4 +22,17 @@ router.post('/add', function(req, res, next) {
   })
 });
 
+router.get('/:id/delete', function(req, res, next){
+  knex('book').where({id: req.params.id}).first().then(function(book){
+    res.render('delete', {book: book})
+  })
+})
+
+router.post('/:id/delete', function(req, res, next){
+  knex('book').where({id: req.params.id}).del()
+  .then(function(book){
+    res.redirect('/');
+  })
+})
+
 module.exports = router;
