@@ -9,8 +9,4 @@ router.get('/', function(req, res, next) {
   })
 });
 
-// router.get('/:id', function(req, res, next) {
-//   res.render('index', { title: 'Galvanize Reads' });
-// });
-
 module.exports = router;
