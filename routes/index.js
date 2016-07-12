@@ -9,6 +9,12 @@ router.get('/', function(req, res, next) {
   })
 });
 
+router.get('/:id/detail', function(req, res, next){
+  knex('book').where({id: req.params.id}).first().then(function(book){
+    res.render('detail', {book: book})
+  })
+})
+
 router.get('/add', function(req, res, next) {
   res.render('add')
 });

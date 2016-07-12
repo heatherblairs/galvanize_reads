@@ -3,14 +3,14 @@
 </head>
 
 <header>
-  <img src="../public/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
+  <img src="/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
   <h1>{{title}}</h1>
 </header>
 
 <ul>
   {{#each bookList}}
     <li>
-      <a href="/{{this.id}}">{{this.title}}</a>
+      <a href="/{{this.id}}/detail">{{this.title}}</a>
       <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
       <a>{{this.genre}}</a>
       <a>{{this.description}}</a>
