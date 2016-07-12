@@ -10,10 +10,14 @@
 <ul>
   {{#each bookList}}
     <li>
-      {{this.title}}
+      <a href="/{{this.id}}">{{this.title}}</a>
+      <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
+      <a>{{this.genre}}</a>
+      <a>{{this.description}}</a>
+      <a>{{this.coverURL}}</a>
     </li>
   {{/each}}
 </ul>
 
-
-<footer></footer>
+<a href="/add">Add a Book!</a>
+<!-- <footer></footer> -->
