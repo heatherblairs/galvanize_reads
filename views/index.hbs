@@ -1,2 +1,19 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Taviraj:500' rel='stylesheet' type='text/css'>
+</head>
+
+<header>
+  <img src="../public/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
+  <h1>{{title}}</h1>
+</header>
+
+<ul>
+  {{#each bookList}}
+    <li>
+      {{this.title}}
+    </li>
+  {{/each}}
+</ul>
+
+
+<footer></footer>
