@@ -1,0 +1,11 @@
+<main>
+  <a href="/">Home</a>
+  <ul>
+    {{#each authors}}
+      <li>{{this.first_name}}</li>
+      <li>{{this.last_name}}</li>
+      <li>{{this.biography}}</li>
+      <img src="{{this.portraitURL}}" alt="Author Portrait URL" />
+    {{/each}}
+  </ul>
+</main>

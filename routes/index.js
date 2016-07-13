@@ -4,10 +4,18 @@ var knex = require('../db/knex');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  knex('book').select().then(function(queryResults){
-    res.render('index', {title: 'Galvanize Reads', bookList: queryResults})
+  knex('book').select()
+  .then(function(bookResults){
+    res.render('index', {title: 'Galvanize Reads', bookList: bookResults})
   })
 });
+
+router.get('/authors', function(req, res, next){
+  knex('author').select()
+  .then(function(authorResults){
+    res.render('authors', {authors: authorResults})
+  })
+})
 
 router.get('/:id/detail', function(req, res, next){
   knex('book').where({id: req.params.id}).first().then(function(book){
