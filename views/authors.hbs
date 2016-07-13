@@ -1,11 +1,37 @@
+<header>
+  <img src="/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
+  <a href="/">
+    <h1>Galvanize Reads</h1>
+  </a>
+</header>
+<nav class="headerButtons">
+  <div class="authorsButton">
+      <img src="https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/python_in_a_nutshell.jpg" height="75px">
+    <a href="/authors">
+      <h2>Authors</h2>
+    </a>
+  </div>
+  <div class="booksButton">
+    <img src="https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/alex_martelli.jpg" height="75px">
+    <a href="/books">
+        <h2>Books</h2>
+    </a>
+  </div>
+</nav>
 <main>
-  <a href="/">Home</a>
-  <ul>
-    {{#each authors}}
-      <li>{{this.first_name}}</li>
-      <li>{{this.last_name}}</li>
-      <li>{{this.biography}}</li>
-      <img src="{{this.portraitURL}}" alt="Author Portrait URL" />
-    {{/each}}
-  </ul>
+  <div class="displayAuthor">
+    <ul>
+      {{#each authors}}
+        <img class="authorPortrait" src="{{this.portraitURL}}" alt="Author Portrait URL">
+        <div class="editBookOrAuthor">
+          <a href="/>{{this.id}}/edit">Edit</a>
+        </div>
+        <div class="deleteBookOrAuthor">
+          <a href="/{{this.id}}/delete">Delete</a>
+        </div>
+        <h3>{{this.first_name}} {{this.last_name}}</h3>
+        <p>{{this.biography}}</p>
+      {{/each}}
+    </ul>
+  </div>
 </main>

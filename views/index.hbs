@@ -1,25 +1,21 @@
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Taviraj:500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
 </head>
-
-<header>
-  <img src="/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
-  <h1>{{title}}</h1>
-</header>
-
-<ul>
-  {{#each bookList}}
-    <li>
-      <a href="/{{this.id}}/detail">{{this.title}}</a>
-      <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
-      <a>{{this.genre}}</a>
-      <a>{{this.description}}</a>
-      <a>{{this.coverURL}}</a>      <a href="/{{this.id}}/edit">Edit this Book</a>
-      <a href="/{{this.id}}/delete">Delete this Book?</a>
-    </li>
-  {{/each}}
-</ul>
-<a href="/authors">Authors List</a>
-<a href="/add">Add a Book!</a>
-
-<!-- <footer></footer> -->
+<body>
+  <header>
+    <img src="/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
+    <h1>Galvanize Reads</h1>
+  </header>
+  <main class="mainPage">
+    <div id="mainAuthors">
+      <a href="/authors">
+        <h1>Authors</h1>
+      </a>
+    </div>
+    <div id="mainBooks">
+      <a href="/books">
+        <h1>Books</h1>
+      </a>
+    </div>
+  </main>
+<body>

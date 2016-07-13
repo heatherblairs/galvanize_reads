@@ -1,0 +1,44 @@
+<header>
+  <img src="/images/readslogo.jpg" height="75px" width="75px" alt="gReads logo">
+  <a href="/">
+    <h1>Galvanize Reads</h1>
+  </a>
+</header>
+<nav class="headerButtons">
+  <div class="authorsButton">
+      <img src="https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/python_in_a_nutshell.jpg" height="75px">
+    <a href="/authors">
+      <h2>Authors</h2>
+    </a>
+  </div>
+  <div class="booksButton">
+    <img src="https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/alex_martelli.jpg" height="75px">
+    <a href="/books">
+        <h2>Books</h2>
+    </a>
+  </div>
+</nav>
+<main>
+  <div class="displayBook">
+    <ul>
+      {{#each bookList}}
+        <li>
+          <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
+          <div class="editBookOrAuthor">
+            <a href="/>{{this.id}}/edit">Edit</a>
+          </div>
+          <div class="deleteBookOrAuthor">
+            <a href="/{{this.id}}/delete">Delete</a>
+          </div>
+          <h3 href="/{{this.id}}/detail">
+            {{this.title}}
+          </h3>
+          <h4>
+            <i>{{this.genre}}</i>
+          </h4>
+          <p>{{this.description}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</main>
