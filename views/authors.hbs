@@ -1,4 +1,7 @@
-<header>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
+</head>
+<header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
     <h1>Galvanize Reads</h1>
@@ -24,7 +27,7 @@
       {{#each authors}}
         <img class="authorPortrait" src="{{this.portraitURL}}" alt="Author Portrait URL">
         <div class="editBookOrAuthor">
-          <a href="/>{{this.id}}/editAuthor">Edit</a>
+          <a href="/{{this.id}}/editAuthor">Edit</a>
         </div>
         <div class="deleteBookOrAuthor">
           <a href="/{{this.id}}/deleteAuthor">Delete</a>

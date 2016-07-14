@@ -21,9 +21,9 @@ router.get('/authors', function(req, res, next){
   })
 })
 
-router.get('/:id/detail', function(req, res, next){
+router.get('/:id/bookDetail', function(req, res, next){
   knex('book').where({id: req.params.id}).first().then(function(book){
-    res.render('detail', {book: book})
+    res.render('bookDetail', {book: book})
   })
 })
 

@@ -11,11 +11,16 @@ header {
   height: 75px;
   width: 100%;
   background-color: #264653;
+  color: #F0A202;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   margin-bottom: 50px;
+}
+
+.mainHeader a {
+  text-decoration: none;
 }
 
 h1 {
@@ -46,6 +51,7 @@ h1 {
 }
 
 .authorsButton a h2, .booksButton a h2 {
+  font-family: 'El Messiri', sans-serif;
   line-height: 45px;
   color: #FDFDFD;
 }
@@ -55,46 +61,42 @@ h1 {
   width: auto;
 }
 
-.mainPage {
+.mainPage, form {
   display: flex;
-  height: 50%;
-  width: 50%;
+  height: 70%;
+  width: 70%;
+  margin: 150px auto;
+  justify-content: center;
+  align-items: center;
 }
 
 #mainAuthors {
   display: flex;
   justify-content: center;
-  align-content: center;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   background: url("/images/authorsmain.jpg") no-repeat;
   background-size: 100%;
-}
-
-#mainAuthors a, #mainBooks a {
-  text-decoration: none;
-  color: #F18805;
 }
 
 #mainBooks {
   display: flex;
   justify-content: center;
-  align-content: center;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   background: url("/images/booksmain.jpg") no-repeat;
   background-size: 100%;
   margin: 10px;
 }
 
-.mainButtons {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background-color: #264653;
-  margin: 5px;
-  border-radius: 5px;*/
-  float: right;
+#mainAuthors a, #mainBooks a {
+  text-decoration: none;
+}
+
+#mainAuthors h1, #mainBooks h1 {
+  text-decoration: none;
+  color: #264653;
+  line-height: 250px;
 }
 
 .displayBook, .displayAuthor {
@@ -120,8 +122,4 @@ h1 {
 .editBookOrAuthor a, .deleteBookOrAuthor a {
  color: #FDFDFD;
  text-decoration: none;
-}
-
-.floatRight {
-   float: right;
 }

@@ -17,11 +17,11 @@
         <h2>Books</h2>
     </a>
   </div>
-<h2>Edit an Author</h2>
+  <h2>Edit an Author</h2>
 <form action="/{{author.id}}/editAuthor" method="post">
   <input type="text" name="first_name" value="{{author.first_name}}">
   <input type="text" name="last_name" value="{{author.last_name}}">
-  <input type="text" name="biography" value="{{author.biography}}">
+  <input type="textarea" name="biography" value="{{author.biography}}">
   <input type="url" name="portraitURL"  value="{{author.portraitURL}}">
-  <button>Edit {{author.first_name}} {{author.last_name}}?</button>
+  <button type="submit">Edit {{author.first_name}} {{author.last_name}}?</button>
 </form>

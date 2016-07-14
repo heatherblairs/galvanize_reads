@@ -17,11 +17,13 @@
         <h2>Books</h2>
     </a>
   </div>
-  <h2>Edit a Book</h2>
-<form action="/{{book.id}}/editBook" method="post">
-  <input type="text" name="title" value="{{book.title}}">
-  <input type="text" name="genre" value="{{book.genre}}">
-  <textarea name="description" placeholder="{{book.description}}"></textarea>
-  <input type="url" name="coverURL" placeholder="Cover URL" value="{{book.coverURL}}">
-  <button>Edit {{book.title}}?</button>
-</form>
+<main>
+  <h2>{{book.name}}</h2>
+  <ul>
+    <a href="/">Home</a>
+    <h3>{{book.title}}</h3>
+    <a>{{book.genre}}</a>
+    <a>{{book.description}}</a>
+    <img src="{{book.coverURL}}" alt="Book Cover URL" />
+  </ul>
+</main>
