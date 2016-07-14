@@ -27,12 +27,25 @@ router.get('/:id/detail', function(req, res, next){
   })
 })
 
-router.get('/add', function(req, res, next) {
-  res.render('add')
+router.get('/addBook', function(req, res, next) {
+  res.render('addBook')
 });
 
-router.post('/add', function(req, res, next) {
+router.post('/addBook', function(req, res, next) {
   knex('book').insert(req.body).then(function(){
+    res.redirect('/');
+  }).catch(function(err){
+    console.log(err)
+    next(err)
+  })
+});
+
+router.get('/addAuthor', function(req, res, next) {
+  res.render('addAuthor')
+});
+
+router.post('/addAuthor', function(req, res, next) {
+  knex('author').insert(req.body).then(function(){
     res.redirect('/');
   }).catch(function(err){
     console.log(err)
