@@ -23,21 +23,25 @@
 </nav>
 <main>
   <div class="displayAuthor">
-    <ul>
-      {{#each authors}}
+    {{#each authors}}
+      <div class="editBookOrAuthor">
+        <a href="/{{this.id}}/editAuthor">
+          <img src="/images/pencil.png">
+        </a>
+      </div>
+      <div class="deleteBookOrAuthor">
+        <a href="/{{this.id}}/deleteAuthor">
+          <img src="/images/redx.png">
+        </a>
+      </div>
+      <div class="bookOrAuthorListContent">
         <img class="authorPortrait" src="{{this.portraitURL}}" alt="Author Portrait URL">
-        <div class="editBookOrAuthor">
-          <a href="/{{this.id}}/editAuthor">Edit</a>
-        </div>
-        <div class="deleteBookOrAuthor">
-          <a href="/{{this.id}}/deleteAuthor">Delete</a>
-        </div>
-        <h3>{{this.first_name}} {{this.last_name}}</h3>
+        <h3><a href="/{{this.id}}/authorDetail">{{this.first_name}} {{this.last_name}}</a></h3>
         <p>{{this.biography}}</p>
-      {{/each}}
-    </ul>
-  </div>
-  <div>
-    <a href="/addAuthor">Add an Author</a>
-  </div>
+        {{/each}}
+        <div class="addAuthorOrBook">
+          <a href="/addAuthor">Add an Author</a>
+        </div>
+      </div>
+    </div>
 </main>

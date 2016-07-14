@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   max-height: 100vh;
   background-color: #FAF8F4;
@@ -31,6 +30,7 @@ h1 {
 }
 
 .headerButtons {
+  width: 100%;
   display: inline-block;
   display: flex;
   justify-content: flex-start;
@@ -40,7 +40,7 @@ h1 {
   height: 75px;
   width: 20%;
   background-color: #67CCDE;
-  margin: 25px;
+  margin: 100px 25px 25px 25px;
   display: flex;
   justify-content: flex-start;
 }
@@ -61,7 +61,7 @@ h1 {
   width: auto;
 }
 
-.mainPage, form {
+.mainPage {
   display: flex;
   height: 70%;
   width: 70%;
@@ -99,27 +99,63 @@ h1 {
   line-height: 250px;
 }
 
+.displayBook, .displayAuthor, .addAuthorOrBook {
+  width: 70%;
+  margin-left: 15rem;
+}
+
 .displayBook, .displayAuthor {
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+
+.bookOrAuthorListContent h3, div {
+  float: right;
+}
+
+.addAuthorOrBook {
+  background-color: #67CCDE;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.addAuthorOrBook a {
+  text-decoration: none;
+  color: #FDFDFD;
+}
+
+.editBookOrAuthor img, .deleteBookOrAuthor img {
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  float: right;
+}
+
+.editForm, .deleteForm, .detail {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  float: right;
   width: 70%;
 }
 
-.displayBook ul, .displayAuthor ul {
-  list-style: none;
+.detail img {
+  height: 200px;
+  width: 150px;
 }
 
-.editBookOrAuthor, .deleteBookOrAuthor {
- height: 50px;
- width: 50px;
- background-color: #67CCDE;
- margin: 10px;
- display: flex;
- justify-content: center;
- align-items: center;
- border-radius: 5px;
- float: right;
-}
-
-.editBookOrAuthor a, .deleteBookOrAuthor a {
- color: #FDFDFD;
- text-decoration: none;
+.editOrDeleteButton {
+	background-color: #67CCDE;
+	color: #FDFDFD;
+	font-size: 20px;
+	font-family: 'El Messiri';
+	padding: 13px 32px;
+	text-decoration: none;
 }

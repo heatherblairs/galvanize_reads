@@ -1,4 +1,7 @@
-<header>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
+</head>
+<header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
     <h1>Galvanize Reads</h1>
@@ -17,11 +20,17 @@
         <h2>Books</h2>
     </a>
   </div>
+<main class="editForm">
   <h2>Edit a Book</h2>
-<form action="/{{book.id}}/editBook" method="post">
-  <input type="text" name="title" value="{{book.title}}">
-  <input type="text" name="genre" value="{{book.genre}}">
-  <textarea name="description" placeholder="{{book.description}}"></textarea>
-  <input type="url" name="coverURL" placeholder="Cover URL" value="{{book.coverURL}}">
-  <button>Edit {{book.title}}?</button>
-</form>
+  <form action="/{{book.id}}/editBook" method="post">
+    <label for="title">Title</label>
+      <input type="text" name="title" value="{{book.title}}">
+    <label for="genre">Genre</label>
+    <input type="text" name="genre" value="{{book.genre}}">
+    <label for="description">Description</label>
+    <textarea name="description">{{book.description}}</textarea>
+    <label for="coverURL">Cover URL</label>
+    <input type="url" name="coverURL" placeholder="Cover URL" value="{{book.coverURL}}">
+    <button>Edit {{book.title}}?</button>
+  </form>
+</main>

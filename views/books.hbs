@@ -1,4 +1,7 @@
-<header>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
+</head>
+<header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
     <h1>Galvanize Reads</h1>
@@ -20,28 +23,32 @@
 </nav>
 <main>
   <div class="displayBook">
-    <ul>
-      {{#each bookList}}
-        <li>
-          <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
-          <div class="editBookOrAuthor">
-            <a href="/{{this.id}}/editBook">Edit</a>
-          </div>
-          <div class="deleteBookOrAuthor">
-            <a href="/{{this.id}}/deleteBook">Delete</a>
-          </div>
-          <h3 href="/{{this.id}}/detail">
-            {{this.title}}
-          </h3>
-          <h4>
-            <i>{{this.genre}}</i>
-          </h4>
-          <p>{{this.description}}</p>
-        </li>
+    {{#each bookList}}
+      <div class="editBookOrAuthor">
+        <a href="/{{this.id}}/editBook">
+          <img src="/images/pencil.png">
+        </a>
+      </div>
+      <div class="deleteBookOrAuthor">
+        <a href="/{{this.id}}/deleteBook">
+          <img src="/images/redx.png">
+        </a>
+      </div>
+      <div class="bookOrAuthorListContent">
+        <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
+        <h3>
+          <a href="/{{this.id}}/bookDetail">
+          {{this.title}}
+          </a>
+        </h3>
+        <h4>
+          <i>{{this.genre}}</i>
+        </h4>
+        <p>{{this.description}}</p>
       {{/each}}
-    </ul>
-  </div>
-  <div>
-    <a href="/addAuthor">Add an Author</a>
+      <div class="addAuthorOrBook">
+        <a href="/addBook">Add a Book</a>
+      </div>
+    </div>
   </div>
 </main>

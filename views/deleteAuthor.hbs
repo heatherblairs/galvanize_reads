@@ -1,4 +1,7 @@
-<header>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
+</head>
+<header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
     <h1>Galvanize Reads</h1>
@@ -17,16 +20,12 @@
         <h2>Books</h2>
     </a>
   </div>
-<h2>Delete an Author</h2>
-<form action="/{{author.id}}/deleteAuthor" method="post">
-  <ul>
-      <li>
-        <a>{{author.first_name}}</a>
-        <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
-        <a>{{author.last_name}}</a>
-        <a>{{author.biography}}</a>
-        <a>{{author.portraitURL}}</a>
-      </li>
-  </ul>
-  <button type="submit">Delete {{author.first_name}} {{author.last_name}}?</button>
-</form>
+<main class="deleteForm">
+  <h2>Delete an Author</h2>
+  <form action="/{{author.id}}/deleteAuthor" method="post">
+    <img class="authorPortrait" src="{{author.portraitURL}}" alt="Portrait URL">
+    <h3>{{author.first_name}} {{author.last_name}}</h3>
+    <p>{{author.biography}}</p>
+    <button class="editOrDeleteButton" type="submit">Delete {{author.first_name}} {{author.last_name}}?</button>
+  </form>
+</main>

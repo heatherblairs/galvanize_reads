@@ -1,4 +1,7 @@
-<header>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
+</head>
+<header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
     <h1>Galvanize Reads</h1>
@@ -17,13 +20,9 @@
         <h2>Books</h2>
     </a>
   </div>
-<main>
-  <h2>{{book.name}}</h2>
-  <ul>
-    <a href="/">Home</a>
-    <h3>{{book.title}}</h3>
-    <a>{{book.genre}}</a>
-    <a>{{book.description}}</a>
-    <img src="{{book.coverURL}}" alt="Book Cover URL" />
-  </ul>
+<main class="detail">
+  <h3>{{book.title}}</h3>
+  <img src="{{book.coverURL}}" alt="Book Cover URL" />
+  <p><i>{{book.genre}}</i></p>
+  <p>{{book.description}}</p>
 </main>

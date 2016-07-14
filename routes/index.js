@@ -27,6 +27,12 @@ router.get('/:id/bookDetail', function(req, res, next){
   })
 })
 
+router.get('/:id/authorDetail', function(req, res, next){
+  knex('author').where({id: req.params.id}).first().then(function(author){
+    res.render('authorDetail', {author: author})
+  })
+})
+
 router.get('/addBook', function(req, res, next) {
   res.render('addBook')
 });

@@ -1,4 +1,7 @@
-<header>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
+</head>
+<header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
     <h1>Galvanize Reads</h1>
@@ -17,11 +20,17 @@
         <h2>Books</h2>
     </a>
   </div>
+<main class="editForm">
   <h2>Edit an Author</h2>
-<form action="/{{author.id}}/editAuthor" method="post">
-  <input type="text" name="first_name" value="{{author.first_name}}">
-  <input type="text" name="last_name" value="{{author.last_name}}">
-  <input type="textarea" name="biography" value="{{author.biography}}">
-  <input type="url" name="portraitURL"  value="{{author.portraitURL}}">
-  <button type="submit">Edit {{author.first_name}} {{author.last_name}}?</button>
-</form>
+  <form action="/{{author.id}}/editAuthor" method="post">
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" value="{{author.first_name}}">
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" value="{{author.last_name}}">
+    <label for="biography">Biography</label>
+    <textarea name="biography">{{author.biography}}</textarea>
+    <label for="portraitURL">Portrait URL</label>
+    <input type="url" name="portraitURL"  value="{{author.portraitURL}}">
+    <button type="submit">Edit {{author.first_name}} {{author.last_name}}?</button>
+  </form>
+</main>
