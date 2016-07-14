@@ -17,24 +17,16 @@
         <h2>Books</h2>
     </a>
   </div>
-</nav>
-<main>
-  <div class="displayAuthor">
-    <ul>
-      {{#each authors}}
-        <img class="authorPortrait" src="{{this.portraitURL}}" alt="Author Portrait URL">
-        <div class="editBookOrAuthor">
-          <a href="/>{{this.id}}/editAuthor">Edit</a>
-        </div>
-        <div class="deleteBookOrAuthor">
-          <a href="/{{this.id}}/deleteAuthor">Delete</a>
-        </div>
-        <h3>{{this.first_name}} {{this.last_name}}</h3>
-        <p>{{this.biography}}</p>
-      {{/each}}
-    </ul>
-  </div>
-  <div>
-    <a href="/addAuthor">Add an Author</a>
-  </div>
-</main>
+<h2>Delete an Author</h2>
+<form action="/{{author.id}}/deleteAuthor" method="post">
+  <ul>
+      <li>
+        <a>{{author.first_name}}</a>
+        <img class="bookCover" src="{{this.coverURL}}" alt="Cover URL">
+        <a>{{author.last_name}}</a>
+        <a>{{author.biography}}</a>
+        <a>{{author.portraitURL}}</a>
+      </li>
+  </ul>
+  <button type="submit">Delete {{author.first_name}} {{author.last_name}}?</button>
+</form>
