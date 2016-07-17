@@ -56,11 +56,6 @@ h1 {
   color: #FDFDFD;
 }
 
-.bookCover, .authorPortrait {
-  height: 200px;
-  width: auto;
-}
-
 .mainPage {
   display: flex;
   height: 70%;
@@ -111,6 +106,13 @@ h1 {
 
 .bookOrAuthorListContent h3, div {
   float: right;
+}
+
+.bookCover, .authorPortrait {
+  height: 200px;
+  width: 170px;
+  float: left;
+  margin: 1rem;
 }
 
 .addAuthorOrBook {

@@ -39,7 +39,7 @@ router.get('/addBook', function(req, res, next) {
 
 router.post('/addBook', function(req, res, next) {
   knex('book').insert(req.body).then(function(){
-    res.redirect('/');
+    res.redirect('/books');
   }).catch(function(err){
     console.log(err)
     next(err)
@@ -52,7 +52,7 @@ router.get('/addAuthor', function(req, res, next) {
 
 router.post('/addAuthor', function(req, res, next) {
   knex('author').insert(req.body).then(function(){
-    res.redirect('/');
+    res.redirect('/authors');
   }).catch(function(err){
     console.log(err)
     next(err)
@@ -68,7 +68,7 @@ router.get('/:id/editBook', function(req, res, next){
 router.post('/:id/editBook', function(req, res, next){
   knex('book').where({id: req.params.id}).update(req.body)
   .then(function(book){
-    res.redirect('/');
+    res.redirect('/books');
   })
 })
 
@@ -81,7 +81,7 @@ router.get('/:id/editAuthor', function(req, res, next){
 router.post('/:id/editAuthor', function(req, res, next){
   knex('author').where({id: req.params.id}).update(req.body)
   .then(function(author){
-    res.redirect('/');
+    res.redirect('/authors');
   })
 })
 
@@ -94,7 +94,7 @@ router.get('/:id/deleteBook', function(req, res, next){
 router.post('/:id/deleteBook', function(req, res, next){
   knex('book').where({id: req.params.id}).del()
   .then(function(book){
-    res.redirect('/');
+    res.redirect('/books');
   })
 })
 
@@ -107,7 +107,7 @@ router.get('/:id/deleteAuthor', function(req, res, next){
 router.post('/:id/deleteAuthor', function(req, res, next){
   knex('author').where({id: req.params.id}).del()
   .then(function(author){
-    res.redirect('/');
+    res.redirect('/authors');
   })
 })
 

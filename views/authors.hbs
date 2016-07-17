@@ -1,6 +1,3 @@
-<head>
-  <link href='https://fonts.googleapis.com/css?family=El+Messiri' rel='stylesheet' type='text/css'>
-</head>
 <header class="mainHeader">
   <img src="/images/readslogo.png" height="75px" width="75px" alt="gReads logo">
   <a href="/">
@@ -24,19 +21,23 @@
 <main>
   <div class="displayAuthor">
     {{#each authors}}
-      <div class="editBookOrAuthor">
-        <a href="/{{this.id}}/editAuthor">
-          <img src="/images/pencil.png">
-        </a>
-      </div>
-      <div class="deleteBookOrAuthor">
-        <a href="/{{this.id}}/deleteAuthor">
-          <img src="/images/redx.png">
-        </a>
-      </div>
       <div class="bookOrAuthorListContent">
+        <div>
+          <div class="editBookOrAuthor">
+          <a href="/{{this.id}}/editAuthor">
+            <img src="/images/pencil.png">
+          </a>
+          </div>
+          <div class="deleteBookOrAuthor">
+            <a href="/{{this.id}}/deleteAuthor">
+              <img src="/images/redx.png">
+            </a>
+          </div>
+          <h3>
+            <a href="/{{this.id}}/authorDetail">{{this.first_name}} {{this.last_name}}</a>
+          </h3>
+        </div>
         <img class="authorPortrait" src="{{this.portraitURL}}" alt="Author Portrait URL">
-        <h3><a href="/{{this.id}}/authorDetail">{{this.first_name}} {{this.last_name}}</a></h3>
         <p>{{this.biography}}</p>
         {{/each}}
         <div class="addAuthorOrBook">
